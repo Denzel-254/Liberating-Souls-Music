@@ -2,8 +2,17 @@ import { FiArrowRight } from "react-icons/fi";
 
 function Hero() {
   return (
-    <section className="bg-[#0F0F0F] text-white py-28 h-120">
-      <div className="max-w-4xl mx-auto text-center px-6">
+    <section
+      className="relative text-white py-28 h-120 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/hero.png')", // <-- put your image here
+      }}
+    >
+      {/* Black overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      {/* Content */}
+      <div className="relative max-w-4xl mx-auto text-center px-6">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Liberating Souls Music (LSM)
         </h1>
