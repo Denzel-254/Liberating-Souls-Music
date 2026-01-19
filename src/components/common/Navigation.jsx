@@ -16,8 +16,7 @@ import {
 function Navigation() {
   const [open, setOpen] = useState(false);
 
-  const linkClass =
-    "flex items-center gap-1 hover:text-[#B23A3A] transition";
+  const linkClass = "flex items-center gap-1 hover:text-[#B23A3A] transition";
 
   return (
     <nav className="bg-[#0F0F0F] text-white px-6 py-4">
@@ -64,6 +63,12 @@ function Navigation() {
               <FiMail /> Contact
             </NavLink>
           </li>
+
+          <li>
+            <NavLink to="/events" className={linkClass}>
+              <FiMail /> Events
+            </NavLink>
+          </li>
         </ul>
 
         {/* CTA + Mobile Toggle */}
@@ -76,10 +81,7 @@ function Navigation() {
           </NavLink>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-xl"
-            onClick={() => setOpen(!open)}
-          >
+          <button className="md:hidden text-xl" onClick={() => setOpen(!open)}>
             {open ? <FiX /> : <FiMenu />}
           </button>
         </div>
@@ -89,38 +91,77 @@ function Navigation() {
       {open && (
         <ul className="md:hidden mt-4 space-y-4 text-sm">
           <li>
-            <NavLink to="/" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiHome /> Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/about"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiInfo /> About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/projects" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/projects"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiLayers /> Projects
             </NavLink>
           </li>
           <li>
-            <NavLink to="/collective" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/collective"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiUsers /> Collective
             </NavLink>
           </li>
           <li>
-            <NavLink to="/what-we-do" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/what-we-do"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiBriefcase /> What We Do
             </NavLink>
           </li>
           <li>
-            <NavLink to="/media" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/media"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiMusic /> Media
             </NavLink>
           </li>
+
           <li>
-            <NavLink to="/contact" className={linkClass} onClick={() => setOpen(false)}>
+            <NavLink
+              to="/contact"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
               <FiMail /> Contact
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/events"
+              className={linkClass}
+              onClick={() => setOpen(false)}
+            >
+              <FiMail /> Events
             </NavLink>
           </li>
 
