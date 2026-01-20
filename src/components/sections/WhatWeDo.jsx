@@ -1,4 +1,5 @@
 import { FiMusic, FiMic, FiUsers, FiTarget } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function WhatWeDo() {
   const items = [
@@ -25,9 +26,11 @@ function WhatWeDo() {
           ))}
         </div>
 
-        <button className="bg-[#3A3A3A] px-6 py-3 rounded-md hover:bg-[#4A4A4A] transition">
-          Our Programs
-        </button>
+        <Link to="/what-we-do">
+          <button className="bg-[#3A3A3A] px-6 cursor-pointer py-3 rounded-md hover:bg-[#4A4A4A] transition">
+            Our Programs
+          </button>
+        </Link>
       </div>
     </section>
   );

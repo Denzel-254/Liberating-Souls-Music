@@ -19,7 +19,7 @@ function Navigation() {
   const linkClass = "flex items-center gap-1 hover:text-[#B23A3A] transition";
 
   return (
-    <nav className="bg-[#0F0F0F] text-white px-6 py-4">
+    <nav className="bg-[#0F0F0F] fixed top-0 laft-0 right-0 w-full z-50 text-white px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="text-xl font-bold">
@@ -74,7 +74,7 @@ function Navigation() {
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-4">
           <NavLink
-            to="/get-involved"
+            to="/donate"
             className="hidden md:flex items-center gap-2 bg-[#8B1E1E] px-4 py-2 rounded-md text-sm hover:bg-[#B23A3A] transition"
           >
             <FiHeart /> Support the Movement
@@ -166,7 +166,7 @@ function Navigation() {
           </li>
 
           <NavLink
-            to="/get-involved"
+            to="/donate"
             onClick={() => setOpen(false)}
             className="w-full flex items-center justify-center gap-2 bg-[#8B1E1E] px-4 py-2 rounded-md hover:bg-[#B23A3A] transition"
           >

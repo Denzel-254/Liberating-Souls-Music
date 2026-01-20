@@ -1,4 +1,5 @@
 import { FiUserPlus, FiHeart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function JoinUs() {
   return (
@@ -7,15 +8,23 @@ function JoinUs() {
       <p className="italic mb-8">Create. Resist. Heal.</p>
 
       <div className="flex flex-wrap justify-center gap-4">
-        <button className="flex items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
-          <FiUserPlus /> Join a Workshop
-        </button>
-        <button className="flex items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
-          <FiHeart /> Partner With Us
-        </button>
-        <button className="flex items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
-          <FiHeart /> Support Our Work
-        </button>
+        <Link to="/projects">
+          <button className="flex cursor-pointer items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
+            <FiUserPlus /> Join a Workshop
+          </button>
+        </Link>
+
+        <Link to="/contact">
+          <button className="flex cursor-pointer items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
+            <FiHeart /> Partner With Us
+          </button>
+        </Link>
+
+        <Link to="/donate">
+          <button className="flex cursor-pointer items-center gap-2 bg-[#1A1A1A] px-5 py-3 rounded-md hover:bg-[#2A2A2A] transition">
+            <FiHeart /> Support Our Work
+          </button>
+        </Link>
       </div>
     </section>
   );

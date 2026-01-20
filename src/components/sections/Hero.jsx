@@ -1,4 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -23,17 +24,21 @@ function Hero() {
 
         <p className="text-lg text-[#D8D8D8] mb-8">
           A people-centered cultural movement rooted in community, resistance,
-          and collective healing. Born in Mathare, Kenya.
+          and collective healing. Born in Nairobi, Kenya.
         </p>
 
         <div className="flex justify-center gap-4">
-          <button className="flex items-center cursor-pointer gap-2 bg-[#2A2A2A] px-6 py-3 rounded-md hover:bg-[#3A3A3A] transition">
-            Learn More <FiArrowRight />
-          </button>
+          <Link to="/about">
+            <button className="flex items-center cursor-pointer gap-2 bg-[#2A2A2A] px-6 py-3 rounded-md hover:bg-[#3A3A3A] transition">
+              Learn More <FiArrowRight />
+            </button>
+          </Link>
 
-          <button className="flex items-center cursor-pointer gap-2 bg-[#8B1E1E] px-6 py-3 rounded-md hover:bg-[#B23A3A] transition">
-            Get Involved <FiArrowRight />
-          </button>
+          <Link to="/donate">
+            <button className="flex items-center cursor-pointer gap-2 bg-[#8B1E1E] px-6 py-3 rounded-md hover:bg-[#B23A3A] transition">
+              Get Involved <FiArrowRight />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

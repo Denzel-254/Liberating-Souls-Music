@@ -19,6 +19,7 @@ import MediaPage from "./components/pages/MediaPage";
 import ContactPage from "./components/pages/ContactPage";
 import CollectivePage from "./components/pages/CollectivePage";
 import EventsPage from "./components/pages/EventsPage";
+import DonatePage from "./components/pages/DonatePage";
 
 /* 🔹 Layout Component */
 function Layout() {
@@ -57,6 +58,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/collective" element={<CollectivePage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/donate" element={<DonatePage />} />
+
       </Route>
     </Routes>
   );

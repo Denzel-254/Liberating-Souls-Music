@@ -58,11 +58,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <img
-          src="/two.jpg"
-          className="rounded-lg object-cover"
-          alt="Mission"
-        />
+        <img src="/two.jpg" className="rounded-lg object-cover" alt="Mission" />
       </section>
 
       {/* CORE VALUES */}
@@ -80,14 +76,11 @@ export default function AboutPage() {
             "Creativity & Excellence",
             "Healing & Wellbeing",
           ].map((value) => (
-            <div
-              key={value}
-              className="bg-[#2A2A2A] p-6 rounded-lg"
-            >
+            <div key={value} className="bg-[#2A2A2A] p-6 rounded-lg">
               <h3 className="font-semibold mb-2">{value}</h3>
               <p className="text-[#D8D8D8] text-sm">
-                Our work is guided by this principle in all creative,
-                political, and community processes.
+                Our work is guided by this principle in all creative, political,
+                and community processes.
               </p>
             </div>
           ))}
@@ -105,7 +98,7 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Our Story</h2>
           <p className="text-[#D8D8D8]">
-            Born in Mathare, LSM emerged from the urgent need for safe creative
+            Born in Nairobi, LSM emerged from the urgent need for safe creative
             spaces, political expression, and collective healing. What began as
             informal community sessions has grown into a cultural movement
             grounded in resistance, solidarity, and people’s power.

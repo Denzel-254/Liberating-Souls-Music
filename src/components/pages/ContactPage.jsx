@@ -97,7 +97,7 @@ export default function ContactPage() {
         </div>
 
         <img
-          src="/mathare.jpg"
+          src="/hero.png"
           className="rounded-lg object-cover"
           alt="Mathare"
         />

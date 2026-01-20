@@ -1,4 +1,5 @@
 import { FiHeart, FiUsers, FiVolume2, FiActivity } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Programs() {
   return (
@@ -18,9 +19,11 @@ function Programs() {
               to create conscious music that speaks truth to power.
             </p>
 
-            <button className="py-2 px-6 rounded-md mt-5 text-white cursor-pointer bg-red-900">
-              Our Story
-            </button>
+            <Link to="/about">
+              <button className="py-2 cursor-pointer px-6 rounded-md mt-5 text-white cursor-pointer bg-red-900">
+                Our Story
+              </button>
+            </Link>
           </div>
         </div>
       </div>
