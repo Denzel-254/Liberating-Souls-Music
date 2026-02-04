@@ -1,9 +1,19 @@
 import PageHero from "../common/PageHero";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
   const [openIndex, setOpenIndex] = useState(null);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
 
   const faqs = [
     {
@@ -24,6 +34,68 @@ export default function ContactPage() {
     },
   ];
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_28oprhi", // replace with your service ID
+        "template_o3ha69t", // replace with your template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "X_QUbI0jlnnSIrQVj" // replace with your public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully ", {
+            style: {
+              background: "#1A1A1A",
+              color: "#D8D8D8",
+              border: "2px solid #8B1E1E",
+              borderRadius: "8px",
+              padding: "16px 24px",
+              fontWeight: "500",
+            },
+            iconTheme: {
+              primary: "#8B1E1E",
+              secondary: "#fff",
+            },
+          });
+          setFormData({ name: "", email: "", message: "" });
+          setLoading(false);
+        },
+        (error) => {
+          console.error(error);
+          toast.error("Failed to send message ", {
+            style: {
+              background: "#1A1A1A",
+              color: "#D8D8D8",
+              border: "2px solid #B23A3A",
+              borderRadius: "8px",
+              padding: "16px 24px",
+              fontWeight: "500",
+            },
+            iconTheme: {
+              primary: "#B23A3A",
+              secondary: "#fff",
+            },
+          });
+          setLoading(false);
+        }
+      );
+  };
+
   return (
     <main className="bg-[#0F0F0F] text-white">
       <PageHero
@@ -32,7 +104,7 @@ export default function ContactPage() {
         image="/one.jpg"
       />
 
-      {/* FAQ SECTION (FIRST) */}
+      {/* FAQ SECTION */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold mb-10 text-center">
           Frequently Asked Questions
@@ -48,9 +120,7 @@ export default function ContactPage() {
                 className="bg-[#2A2A2A] rounded-lg overflow-hidden"
               >
                 <button
-                  onClick={() =>
-                    setOpenIndex(isOpen ? null : index)
-                  }
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className="font-semibold">{faq.q}</span>
@@ -68,30 +138,46 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CONTACT SECTION (SECOND) */}
+      {/* CONTACT SECTION */}
       <section className="py-20 px-6 max-w-3xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-[#D8D8D8] mb-6">
-            Location: Mathare, Kenya
-          </p>
+          <p className="text-[#D8D8D8] mb-6">Location: Mathare, Kenya</p>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full p-3 bg-[#1A1A1A] rounded-md"
               placeholder="Name"
+              required
             />
             <input
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-3 bg-[#1A1A1A] rounded-md"
               placeholder="Email"
+              required
             />
             <textarea
+              name="message"
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full p-3 bg-[#1A1A1A] rounded-md"
               placeholder="Message"
+              required
             />
-            <button className="bg-[#8B1E1E] px-6 py-3 rounded-md hover:bg-[#B23A3A] transition">
-              Send Message
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-[#8B1E1E] px-6 py-3 rounded-md hover:bg-[#B23A3A] transition disabled:opacity-50"
+            >
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
