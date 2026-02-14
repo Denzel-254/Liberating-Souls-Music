@@ -1,7 +1,7 @@
 export default function PageHero({ title, subtitle, image }) {
   return (
     <section
-      className="relative py-32 bg-cover bg-center"
+      className="relative py-32 bg-contain bg-center"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-black/70"></div>

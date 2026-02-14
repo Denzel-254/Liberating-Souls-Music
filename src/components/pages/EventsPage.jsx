@@ -7,7 +7,7 @@ const EventsPage = () => {
       title: "Liberating Souls Community Concert",
       description: "A night of revolutionary sound and resistance.",
       eventDate: "2026-03-10T18:00:00",
-      price: 500,
+      price: 1000,
       image: "/hero.png",
     },
 
@@ -16,7 +16,7 @@ const EventsPage = () => {
       title: "Liberating Souls Community Concert",
       description: "A night of revolutionary sound and resistance.",
       eventDate: "2026-03-10T18:00:00",
-      price: 500,
+      price: 4500,
       image: "/hero.png",
     },
 
@@ -25,7 +25,7 @@ const EventsPage = () => {
       title: "Liberating Souls Community Concert",
       description: "A night of revolutionary sound and resistance.",
       eventDate: "2026-03-10T18:00:00",
-      price: 500,
+      price: 800,
       image: "/hero.png",
     },
   ];

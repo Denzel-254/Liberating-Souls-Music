@@ -52,15 +52,15 @@ export default function CollectivePage() {
       <PageHero
         title="The LSM Collective"
         subtitle="Artists, organizers, and cultural workers building together."
-        image="/hero.png"
+        image="/logo.png"
       />
 
       {/* INTRO */}
       <section className="py-20 px-6 max-w-4xl mx-auto text-center">
         <p className="text-[#D8D8D8] text-lg">
-          Liberating Souls Music is led by a collective of artists and organizers
-          committed to shared leadership, accountability, and community-rooted
-          cultural work.
+          Liberating Souls Music is led by a collective of artists and
+          organizers committed to shared leadership, accountability, and
+          community-rooted cultural work.
         </p>
       </section>
 
@@ -78,17 +78,11 @@ export default function CollectivePage() {
                 className="w-32 h-32 mx-auto mb-4 rounded-full object-cover"
               />
 
-              <h3 className="font-semibold text-lg mb-1">
-                {member.role}
-              </h3>
+              <h3 className="font-semibold text-lg mb-1">{member.role}</h3>
 
-              <p className="text-sm text-[#8A7F6A] mb-3">
-                {member.name}
-              </p>
+              <p className="text-sm text-[#8A7F6A] mb-3">{member.name}</p>
 
-              <p className="text-[#D8D8D8] text-sm">
-                {member.description}
-              </p>
+              <p className="text-[#D8D8D8] text-sm">{member.description}</p>
             </div>
           ))}
         </div>

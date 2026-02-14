@@ -54,7 +54,7 @@ export default function ContactPage() {
           email: formData.email,
           message: formData.message,
         },
-        "X_QUbI0jlnnSIrQVj" // replace with your public key
+        "X_QUbI0jlnnSIrQVj", // replace with your public key
       )
       .then(
         () => {
@@ -92,7 +92,7 @@ export default function ContactPage() {
             },
           });
           setLoading(false);
-        }
+        },
       );
   };
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
       <PageHero
         title="Contact Us"
         subtitle="Reach out. Connect. Build together."
-        image="/one.jpg"
+        image="/logo.png"
       />
 
       {/* FAQ SECTION */}
