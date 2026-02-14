@@ -25,7 +25,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Projects & Impact"
         subtitle="Community-rooted initiatives with real outcomes."
-        image="/hero.png"
+        image="/logo.png"
       />
 
       <section className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
