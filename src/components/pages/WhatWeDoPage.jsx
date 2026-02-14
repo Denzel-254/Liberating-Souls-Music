@@ -6,7 +6,7 @@ export default function WhatWeDoPage() {
       <PageHero
         title="What We Do"
         subtitle="Art, politics, and community organizing in action."
-        image="/hero.png"
+        image="/logo.png"
       />
 
       {/* MUSIC PRODUCTION */}
@@ -28,13 +28,11 @@ export default function WhatWeDoPage() {
       <section className="py-20 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <img src="/hero.png" className="rounded-lg object-cover" />
         <div>
-          <h2 className="text-2xl font-bold mb-4">
-            Community-Based Workshops
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">Community-Based Workshops</h2>
           <p className="text-[#D8D8D8]">
-            Our workshops focus on music & activism, spoken word and storytelling,
-            songwriting for social change, and mental health and collective
-            healing.
+            Our workshops focus on music & activism, spoken word and
+            storytelling, songwriting for social change, and mental health and
+            collective healing.
           </p>
         </div>
       </section>
@@ -47,8 +45,8 @@ export default function WhatWeDoPage() {
           </h2>
           <p className="text-[#D8D8D8]">
             We organize community-centered performances that combine art,
-            political education, and mobilization while creating safe spaces
-            for expression.
+            political education, and mobilization while creating safe spaces for
+            expression.
           </p>
         </div>
         <img src="/hero.png" className="rounded-lg object-cover" />
