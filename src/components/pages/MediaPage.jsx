@@ -15,7 +15,7 @@ export default function MediaPage() {
       <PageHero
         title="Media"
         subtitle="Music, live sessions, and performances."
-        image="/one.jpg"
+        image="/logo.png"
       />
 
       {/* Masonry Grid */}
